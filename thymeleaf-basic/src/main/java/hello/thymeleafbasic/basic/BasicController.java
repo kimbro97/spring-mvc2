@@ -95,6 +95,12 @@ public class BasicController {
         return "basic/each";
     }
 
+    @GetMapping("/condition")
+    public String condition(Model model) {
+        addUsers(model);
+        return "basic/condition";
+    }
+
     private void addUsers(Model model) {
         ArrayList<User> users = new ArrayList<>();
         users.add(new User("userA", 10));
