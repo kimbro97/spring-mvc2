@@ -77,6 +77,13 @@ public class BasicController {
         return "basic/literal";
     }
 
+    @GetMapping("/operation")
+    public String operation(Model model) {
+        model.addAttribute("data", "Spring!");
+        model.addAttribute("nullData", null);
+        return "basic/operation";
+    }
+
     @Component("helloBean")
     static class HelloBean {
         public String hello(String data) {
